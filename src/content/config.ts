@@ -13,7 +13,7 @@ const blogSchema = z.object({
     })
     .optional(),
 });
-
+/*
 const storeSchema = z.object({
   title: z.string(),
   description: z.string(),
@@ -25,15 +25,15 @@ const storeSchema = z.object({
   badge: z.string().optional(),
   checkoutUrl: z.string().optional(),
   heroImage: z.string().optional(),
-});
+});*/
 
 export type BlogSchema = z.infer<typeof blogSchema>;
-export type StoreSchema = z.infer<typeof storeSchema>;
+//export type StoreSchema = z.infer<typeof storeSchema>;
 
 const blogCollection = defineCollection({ schema: blogSchema });
-const storeCollection = defineCollection({ schema: storeSchema });
+//const storeCollection = defineCollection({ schema: storeSchema });
 
 export const collections = {
   blog: blogCollection,
-  store: storeCollection,
+  //store: storeCollection,
 };
